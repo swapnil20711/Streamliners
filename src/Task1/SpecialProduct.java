@@ -1,15 +1,17 @@
 package Task1;
 
 public class SpecialProduct extends Product {
-    static int regularPrice;
-    static int discountedPrice;
 
-    static String name;
-    static int price;
+    int percentageOff, regularPrice;
 
     @Override
     public String toString() {
-        return String.format("Product name is " + name + " Product after discount is " + discountedPrice);
+        return "SpecialProduct{" +
+                "percentageOff=" + percentageOff +
+                ", regularPrice=" + regularPrice +
+                ", name='" + name + '\'' +
+                ", DiscountedPrice=" + price +
+                '}';
     }
 
     public SpecialProduct(String name, int price) {
@@ -17,10 +19,11 @@ public class SpecialProduct extends Product {
     }
 
     public static SpecialProduct applyOffProduct(Product product, int percentageOff) {
+        int discountedPrice;
         discountedPrice = (product.price - ((product.price * percentageOff) / 100));
-        regularPrice = product.price;
-        name = product.name;
-        price = product.price;
-        return new SpecialProduct(name, discountedPrice);
+        SpecialProduct specialProduct = new SpecialProduct(product.name, discountedPrice);
+        specialProduct.regularPrice = product.price;
+        specialProduct.percentageOff = percentageOff;
+        return specialProduct;
     }
 }

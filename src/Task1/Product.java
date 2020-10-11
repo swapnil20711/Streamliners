@@ -10,12 +10,14 @@ public class Product {
         this.price = price;
     }
 
-    /*****
-     TODO
-     @Override public boolean equals(Product product){
-
-     }
-     ****/
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return price == product.price &&
+                name.equals(product.name);
+    }
 
     @Override
     public String toString() {
