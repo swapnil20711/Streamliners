@@ -8,9 +8,7 @@ public class Main {
         GroceryItem jaggery = new GroceryItem("Jaggery", 40);
         GroceryItem Apple = new GroceryItem("Apple", 100);
         GroceryItem Mango = new GroceryItem("Mango", 60);
-        ArrayList<GroceryCartItem> cartItems = new ArrayList<>();
-        float totalAmount = 0;
-        Cart cart = new Cart(cartItems, totalAmount);
+        Cart cart = new Cart();
         cart.add(GroceryCartItem.createNew(sugar, "3kg 0g"))
                 .add(GroceryCartItem.createNew(jaggery, "0kg 75g"))
                 .add(GroceryCartItem.createNew(Apple, "1kg 500g"))

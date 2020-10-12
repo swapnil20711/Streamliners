@@ -7,10 +7,18 @@ public class Cart {
     float totalAmount = 0;
     StringBuilder builder = new StringBuilder();
 
+    //parameterized constructor
     public Cart(ArrayList<GroceryCartItem> cartItems, float totalAmount) {
         this.cartItems = cartItems;
         this.totalAmount = totalAmount;
     }
+
+    //default constructor
+    public Cart() {
+        this.cartItems = new ArrayList<>();
+        this.totalAmount = totalAmount;
+    }
+
 
     public Cart add(GroceryCartItem item) {
         builder.append("\n" + "\t" + item.name + " (" + "₹" + item.pricePerKg + " × " + item.quantity + "kg" + ") =" + " ₹" + item.price + "," + " \n");
