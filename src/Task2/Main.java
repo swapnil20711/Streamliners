@@ -9,8 +9,8 @@ public class Main {
         GroceryItem Apple = new GroceryItem("Apple", 100);
         GroceryItem Mango = new GroceryItem("Mango", 60);
         Cart cart = new Cart();
-        cart.add(GroceryCartItem.createNew(sugar, "3kg 0g"))
-                .add(GroceryCartItem.createNew(jaggery, "0kg 75g"))
+        cart.add(GroceryCartItem.createNew(sugar, "3g"))
+                .add(GroceryCartItem.createNew(jaggery, "5kg"))
                 .add(GroceryCartItem.createNew(Apple, "1kg 500g"))
                 .add(GroceryCartItem.createNew(Mango, "3kg 500g"));
         System.out.println(cart);
